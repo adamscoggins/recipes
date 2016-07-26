@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="99" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HRi-Qt-nNT">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="99" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HRi-Qt-nNT">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -26,13 +26,13 @@
                                         <rect key="frame" x="0.0" y="92" width="600" height="99"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d4S-6i-X3b" id="MSc-0b-Ncn">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="98"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JJi-eP-XGv">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JJi-eP-XGv">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="98"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Juicy Hamburger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19G-rg-32h">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Juicy Hamburger" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19G-rg-32h">
                                                     <rect key="frame" x="8" y="38" width="584" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="DPG-6Q-l6Y"/>
@@ -93,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="1372" y="478"/>
         </scene>
-        <!--View Controller-->
+        <!--Create RecipeVC-->
         <scene sceneID="RjY-o6-qf7">
             <objects>
-                <viewController id="xeV-sz-hp6" sceneMemberID="viewController">
+                <viewController id="xeV-sz-hp6" customClass="CreateRecipeVC" customModule="recipes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YXO-od-5v1"/>
                         <viewControllerLayoutGuide type="bottom" id="fYt-Zk-eL1"/>
@@ -120,7 +120,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nok-Mp-2Hi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food" translatesAutoresizingMaskIntoConstraints="NO" id="nok-Mp-2Hi">
                                 <rect key="frame" x="213" y="247" width="175" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="175" id="ciT-6A-fql"/>
@@ -132,6 +132,9 @@
                                 <state key="normal" title="ADD IMAGE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addImage:" destination="xeV-sz-hp6" eventType="touchUpInside" id="Lxw-VU-V4d"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGU-hU-HlH">
                                 <rect key="frame" x="252" y="451" width="97" height="30"/>
@@ -140,6 +143,9 @@
                                     <constraint firstAttribute="width" constant="97" id="tY4-6s-KRR"/>
                                 </constraints>
                                 <state key="normal" title="Create Recipe"/>
+                                <connections>
+                                    <action selector="createRecipe:" destination="xeV-sz-hp6" eventType="touchUpInside" id="Wry-nX-n8U"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -163,6 +169,13 @@
                             <constraint firstItem="JGU-hU-HlH" firstAttribute="centerX" secondItem="vcD-wS-hsu" secondAttribute="centerX" id="vjP-Fz-6lP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addRecipeBtn" destination="vwG-3b-zk0" id="31i-9v-VHr"/>
+                        <outlet property="recipeImg" destination="nok-Mp-2Hi" id="rdc-gj-B5V"/>
+                        <outlet property="recipeIngredients" destination="hIK-Bb-anY" id="ZE7-Qz-mLm"/>
+                        <outlet property="recipeSteps" destination="TuR-9d-9aO" id="X9w-Th-uHu"/>
+                        <outlet property="recipeTitle" destination="1Z7-Ls-50X" id="zOS-eL-3oN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IeG-G2-jQZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,4 +201,7 @@
             <point key="canvasLocation" x="560" y="1138"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="food" width="1200" height="692"/>
+    </resources>
 </document>

@@ -16,6 +16,7 @@
 		88E8C84A1D47A6DD006FFC14 /* Recipe+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E8C8481D47A6DD006FFC14 /* Recipe+CoreDataProperties.swift */; };
 		88E8C84B1D47A6DD006FFC14 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E8C8491D47A6DD006FFC14 /* Recipe.swift */; };
 		88E8C84D1D47ADAA006FFC14 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E8C84C1D47ADAA006FFC14 /* RecipeCell.swift */; };
+		88E8C84F1D47BEC0006FFC14 /* CreateRecipeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E8C84E1D47BEC0006FFC14 /* CreateRecipeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		88E8C8481D47A6DD006FFC14 /* Recipe+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Recipe+CoreDataProperties.swift"; path = "../Recipe+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		88E8C8491D47A6DD006FFC14 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Recipe.swift; path = ../Recipe.swift; sourceTree = "<group>"; };
 		88E8C84C1D47ADAA006FFC14 /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		88E8C84E1D47BEC0006FFC14 /* CreateRecipeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRecipeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				88E8C8321D479FC5006FFC14 /* ViewController.swift */,
+				88E8C84E1D47BEC0006FFC14 /* CreateRecipeVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				88E8C84A1D47A6DD006FFC14 /* Recipe+CoreDataProperties.swift in Sources */,
 				88E8C8391D479FC5006FFC14 /* recipes.xcdatamodeld in Sources */,
 				88E8C84D1D47ADAA006FFC14 /* RecipeCell.swift in Sources */,
+				88E8C84F1D47BEC0006FFC14 /* CreateRecipeVC.swift in Sources */,
 				88E8C8311D479FC5006FFC14 /* AppDelegate.swift in Sources */,
 				88E8C84B1D47A6DD006FFC14 /* Recipe.swift in Sources */,
 			);
